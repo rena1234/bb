@@ -7,10 +7,8 @@ import { SearchProvider } from 'Contexts/Context.js';
 function App (props) {
 	return(
     <SearchProvider value={[]}>
-      <div>
-        <TopBar/>
-        <CardsContainer/>
-      </div>
+      <TopBar/>
+      <CardsContainer pageSize={8}/>
     </SearchProvider>
 	);
 }
