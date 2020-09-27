@@ -13,6 +13,8 @@ function TopBar(props) {
 
 	return(
     <div className={style['top-bar']}>
+      <div className={style['top-bar__logo']}>
+      </div>
       <TextField
         id="search-input"
         name="city"

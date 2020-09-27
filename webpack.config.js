@@ -7,6 +7,12 @@ module.exports = {
     filename: "main.[contentHash].js",
     path: path.resolve(__dirname, "dist")
   },
+	plugins: [
+		new HtmlWebPackPlugin({
+			template: './src/index.html',
+			filename: './index.html'
+		}),
+	],
   module: {
     rules: [
       {
@@ -38,20 +44,26 @@ module.exports = {
 						loader: 'sass-loader',
             options: {
               sassOptions: {
-                includePaths: ['src']
+                includePaths: ['src', 'assets']
               }
             }
-					}
+					},
 				]
-			}
+			},
+      {
+        test: /\.(png|svg|jpg|gif)$/,
+        exclude: /node_modules/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+            }
+          }
+        ],
+      },
     ]
   },
-	plugins: [
-		new HtmlWebPackPlugin({
-			template: './src/index.html',
-			filename: './index.html'
-		})
-	],
 	resolve:{
 		alias: {
 			Components: path.resolve(__dirname, 'src/components'),

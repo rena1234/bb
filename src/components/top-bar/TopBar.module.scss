@@ -1,4 +1,16 @@
 @import '_main.scss';
 
 .top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2vh 10vw 3vh 10vw; 
+  .top-bar__logo{
+    height: 10vh;
+    width: 15vw;
+    background-image: url('../../../assets/logo.png');
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
 }
