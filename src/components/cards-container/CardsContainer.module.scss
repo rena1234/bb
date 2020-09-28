@@ -1,12 +1,18 @@
 @import '_main.scss';
 
 .cards-container {
+  font-family: Roboto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   background-color: $background-color;
   color: $text-color-highlight;
   height: 100%;
+
+  .cards-container__title {
+    padding: 0vh 10vw;
+    font-weight: bold;
+  }
 
   .cards-container__cards {
     padding: 2vh 10vw;

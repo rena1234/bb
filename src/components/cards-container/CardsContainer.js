@@ -7,6 +7,7 @@ function CardsContainer({pageSize}) {
   const { search, setSearch } = useContext(SearchContext);
   const [ characters, setCharacters] = useState([[]]);
   const [ page, setPage ] = useState(0);
+  const [ title, setTitle] = useState('Personagens');
 
   const getPages = (items, pageSize) => {
     if(items.length <= pageSize){
@@ -16,7 +17,7 @@ function CardsContainer({pageSize}) {
     return [chunk, ...getPages(items, pageSize)]
   }
 
-  const getCharacters = (searchString) => {
+  const updateCharacters = (searchString) => {
     fetch(`https://www.breakingbadapi.com/api/characters?name=${searchString}`)
       .then(response => response.json())
       .then(data => {
@@ -24,13 +25,25 @@ function CardsContainer({pageSize}) {
       });
   }
 
+  const updateTitle = (searchString) => {
+    if(searchString != '') {
+      setTitle(`Você pesquisou por "${searchString}"`);
+    } else {
+      setTitle('Personagens');
+    }
+  }
+
   useEffect(() => {
     setPage(0);
-    getCharacters(search);
+    updateCharacters(search);
+    updateTitle(search);
   }, [search]);
 
 	return(
     <div className={style['cards-container']}>
+      <div className={style['cards-container__title']}>
+        {title}
+      </div>
       <div className={style['cards-container__cards']}>
         { React.Children.toArray(
            characters[page].map( (c) => 
