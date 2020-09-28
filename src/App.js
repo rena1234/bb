@@ -22,10 +22,12 @@ function App (props) {
 
 	return(
     <SearchProvider value={[]}>
-      <ThemeProvider theme={theme}>
-        <TopBar/>
-      </ThemeProvider>
-      <CardsContainer pageSize={8}/>
+      <div className={style['app']}>
+        <ThemeProvider theme={theme}>
+          <TopBar/>
+        </ThemeProvider>
+        <CardsContainer pageSize={8}/>
+      </div>
     </SearchProvider>
 	);
 }

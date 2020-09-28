@@ -6,17 +6,22 @@
   justify-content: space-between;
   background-color: $background-color;
   color: $text-color-highlight;
+  height: 100%;
 
   .cards-container__paginator {
     width: 100%;
     display: flex;
     justify-content: center;
     .cards-container__paginator__button {
-      color: #ffffff;
-      //color: red;
+      color: $text-color-highlight;
       border: none;
       background: none;
     }
+    .cards-container__paginator__button:hover {
+      color: #1ED760;
+      transition: 1s;
+    }
+    padding: 5vh;
   }
 
   .highlight {
