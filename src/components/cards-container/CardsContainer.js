@@ -33,11 +33,13 @@ function CardsContainer({pageSize}) {
     }
   }
 
+  console.log(pageSize);
+
   useEffect(() => {
     setPage(0);
     updateCharacters(search);
     updateTitle(search);
-  }, [search]);
+  }, [search, pageSize]);
 
 	return(
     <div className={style['cards-container']}>

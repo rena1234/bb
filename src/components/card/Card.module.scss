@@ -2,14 +2,17 @@
 
 .card {
   height: 33vh;
-  width: 17vw;
-  margin-right: 4vw;
+  //width: 15vw;
+  width: 19%;
+  //margin-right: 1.24vw;
+  margin-right: 1%;
   margin-bottom: 3vw;
   font-family: Roboto;
 
   .card__img {
     height: 29vh;
-    width: 17vw;
+//    width: 17vw;
+    width: 100%;
     background-size: cover;
     background-position: center top;
     display: flex;
@@ -43,7 +46,7 @@
   }
 }
 
-.card:nth-child(4n) {
+.card:nth-child(5n) {
   margin-right: 0vw;
 }
 
