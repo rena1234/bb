@@ -36,12 +36,16 @@ function CardsContainer({pageSize}) {
            characters[page].map( (c) => <Card name={c.name}/>)
            )}
       </div>
-      <div>
+      <div className={style['cards-container__paginator']}>
         { React.Children.toArray(
            characters.map( 
-             (page, index) => <button id={`page-button-${index}`} onClick={() => setPage(index)}>{index + 1}</button>
+             (p, index) => 
+               <button 
+                 className={`${style['cards-container__paginator__button']} ${page === index? style['highlight']: ''}` } id={`page-button-${index}`} onClick={() => setPage(index)}>
+                 {index + 1}
+               </button>
            )
-           )}
+         )}
       </div>
     </div>
 	);

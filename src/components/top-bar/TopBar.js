@@ -20,6 +20,7 @@ function TopBar(props) {
         name="city"
         type="text"
         placeholder="Personagens"
+        className={style['textfield']}
         onChange={handleInputChange}
         InputLabelProps={{
           shrink: true

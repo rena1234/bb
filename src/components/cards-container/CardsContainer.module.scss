@@ -1,5 +1,25 @@
+@import '_main.scss';
+
 .cards-container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  background-color: $background-color;
+  color: $text-color-highlight;
+
+  .cards-container__paginator {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    .cards-container__paginator__button {
+      color: #ffffff;
+      //color: red;
+      border: none;
+      background: none;
+    }
+  }
+
+  .highlight {
+    text-decoration: underline;
+  }
 }
