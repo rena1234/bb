@@ -1,3 +1,58 @@
-.character-name {
+@import '_main.scss';
+
+.card {
+  height: 33vh;
+  width: 17vw;
+  margin-right: 4vw;
+  margin-bottom: 3vw;
   font-family: Roboto;
+
+  .card__img {
+    height: 29vh;
+    width: 17vw;
+    background-size: cover;
+    background-position: center top;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .card__img__status {
+      width: 7vw;
+      padding:  0.5vh 0;
+      margin-top: 5%;
+      text-align: center;
+      flex-grow: 0;
+      align-self: flex-end;
+      font-size: 1.1vw;
+    }
+  }
+
+  .card__info {
+    .card__info__desc {
+      font-size: 0.8vw;
+      color: $text-color-darker;
+    }
+
+    .card__info__birthday {
+      font-size: 0.9vw;
+      margin-top: 1vh;
+      .card__info__birthday__date {
+        color: lighten($text-color-darker, 20%);
+      }
+    }
+  }
+}
+
+.card:nth-child(4n) {
+  margin-right: 0vw;
+}
+
+.card:nth-child(1n + 5) {
+  margin-bottom: 0vw;
+}
+
+.character-name {
+  text-shadow: 0 0 2px black;
+  margin-left: 5%;
+  font-size: 1.5vw;
 }

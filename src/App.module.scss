@@ -6,4 +6,7 @@
   height: 100%;
   width: 100%;
   background: red;
+  .app__top-bar {
+    flex-grow: 0;
+  }
 }

@@ -24,7 +24,7 @@ function App (props) {
     <SearchProvider value={[]}>
       <div className={style['app']}>
         <ThemeProvider theme={theme}>
-          <TopBar/>
+          <TopBar className={style['app__top-bar']}/>
         </ThemeProvider>
         <CardsContainer pageSize={8}/>
       </div>

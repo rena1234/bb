@@ -8,10 +8,25 @@
   color: $text-color-highlight;
   height: 100%;
 
+  .cards-container__cards {
+    padding: 2vh 10vw;
+    display: flex;
+    //justify-content: space-between;
+    flex-wrap: wrap;
+    .cards-container__cards__card {
+      margin-left: 4vw;
+    }
+  }
+
+  .cards-container__cards > div {
+      //margin-left: 4vw;
+  }
+
   .cards-container__paginator {
     width: 100%;
     display: flex;
     justify-content: center;
+    padding-bottom: 5vh;
     .cards-container__paginator__button {
       color: $text-color-highlight;
       border: none;
@@ -21,7 +36,6 @@
       color: #1ED760;
       transition: 1s;
     }
-    padding: 5vh;
   }
 
   .highlight {
