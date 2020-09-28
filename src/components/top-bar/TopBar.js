@@ -17,9 +17,10 @@ function TopBar(props) {
       </div>
       <TextField
         id="search-input"
-        name="city"
+        name="search"
         type="text"
-        placeholder="Personagens"
+        placeholder="Pesquise os personagens"
+        inputProps={{ style: { color: 'white'}}}
         className={style['textfield']}
         onChange={handleInputChange}
         InputLabelProps={{
