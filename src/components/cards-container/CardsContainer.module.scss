@@ -5,19 +5,21 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: $background-color;
   color: $text-color-highlight;
+  background: $background-color;
   height: 100%;
+  overflow: auto;
 
   .cards-container__title {
-    padding: 0vh 10vw;
     font-weight: bold;
+    width: 100%;
   }
 
   .cards-container__cards {
-    padding: 2vh 10vw;
+    padding: 0 10vw;
     display: flex;
-    //justify-content: space-between;
+    flex-grow: 1;
+    position: relative;
     flex-wrap: wrap;
     .cards-container__cards__card {
       margin-left: 4vw;
@@ -25,15 +27,10 @@
     overflow: auto;
   }
 
-  .cards-container__cards > div {
-      //margin-left: 4vw;
-  }
-
   .cards-container__paginator {
     width: 100%;
     display: flex;
     justify-content: center;
-    padding-bottom: 5vh;
     .cards-container__paginator__button {
       color: $text-color-highlight;
       border: none;
@@ -43,9 +40,12 @@
       color: #1ED760;
       transition: 1s;
     }
+    height: 5vh;
+    flex-shrink: 0;
   }
 
   .highlight {
     text-decoration: underline;
   }
 }
+

@@ -2,16 +2,27 @@
 
 .card {
   height: 33vh;
-  //width: 15vw;
-  width: 19%;
-  //margin-right: 1.24vw;
-  margin-right: 1%;
+  width: 48%;
+  margin-right: 2%;
+
+  @include tablet {
+    width: 23%;
+    margin-right: 2%;
+  }
+
+  @include desktop{
+    width: 19%;
+    margin-right: 1%;
+  }
+
   margin-bottom: 3vw;
+  @include desktop {
+    margin-bottom: 1vw;
+  }
   font-family: Roboto;
 
   .card__img {
     height: 29vh;
-//    width: 17vw;
     width: 100%;
     background-size: cover;
     background-position: center top;
@@ -20,24 +31,64 @@
     justify-content: space-between;
 
     .card__img__status {
-      width: 7vw;
+      width: 14vw;
+      @include tablet {
+        width: 10vw;
+      }
+      @include tablet{
+        width: 7vw;
+      }
       padding:  0.5vh 0;
       margin-top: 5%;
       text-align: center;
       flex-grow: 0;
       align-self: flex-end;
-      font-size: 1.1vw;
+      font-size: 3vw;
+      @include tablet {
+        font-size: 1.3vw;
+      }
+      @include desktop{
+        font-size: 1.1vw;
+      }
     }
+
+
+    .card__img__name {
+      text-shadow: 0 0 2px black;
+      margin-left: 5%;
+      font-size: 4vw;
+      @include tablet {
+        font-size: 2vw;
+      }
+      @include desktop {
+        font-size: 1.5vw;
+      }
+    }
+
   }
 
   .card__info {
     .card__info__desc {
-      font-size: 0.8vw;
+      font-size: 2.2vw;
+
+      @include tablet{
+        font-size: 1.1vw;
+      }
+      @include desktop {
+        font-size: 0.8vw;
+      }
       color: $text-color-darker;
     }
 
     .card__info__birthday {
-      font-size: 0.9vw;
+      //font-size: 1.6vw;
+      font-size: 2.3vw;
+      @include tablet{
+        font-size: 1.1vw;
+      }
+      @include desktop {
+        font-size: 0.9vw;
+      }
       margin-top: 1vh;
       .card__info__birthday__date {
         color: lighten($text-color-darker, 20%);
@@ -46,16 +97,22 @@
   }
 }
 
-.card:nth-child(5n) {
-  margin-right: 0vw;
-}
-
 .card:nth-child(1n + 5) {
-  margin-bottom: 0vw;
+  @include desktop {
+    margin-bottom: 0vw;
+  }
 }
 
+/*
 .character-name {
   text-shadow: 0 0 2px black;
   margin-left: 5%;
-  font-size: 1.5vw;
+  font-size: 4vw;
+  @include tablet {
+    font-size: 2vw;
+  }
+  @include desktop {
+    font-size: 1.5vw;
+  }
 }
+*/

@@ -1,9 +1,7 @@
 import React, { useContext } from 'react';
-//import CharactersContext from 'Contexts/Context';
 import  style from './Card.module.scss';
 
 function Card({character}) {
-  //const { characters, setCharacters} = useContext(CharactersContext);
   const backgroundImgStyle = {
     backgroundImage: `url(${character.img})`
   }
@@ -29,7 +27,7 @@ function Card({character}) {
           {character.status}
         </div>
         <div>
-          <span className={`${style['character-name']} character-name`}>{character.name}</span>
+          <span className={`${style['card__img__name']} character-name`}>{character.name}</span>
         </div>
       </div>
       <div className={style['card__info']}>
@@ -37,7 +35,7 @@ function Card({character}) {
           <span>&#9733; </span>
           <span className={style['card__info__birthday__date']}>{character.birthday}</span>
         </div>
-        <span className={style['card__info__desc']}>{character.occupation}</span>
+        <span className={style['card__info__desc']}>{character.occupation.join(', ')}</span>
       </div>
     </div>
 	);

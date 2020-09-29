@@ -21,12 +21,12 @@ function App (props) {
   });
 
   const getPageSize = (width) => {
-    if(width > 1024) {
+    if(width >= 1024) {
       return 10;
-    } else if(width > 768 ){
+    } else if(width >= 768 ){
       return 8;
     } else {
-      return 4;
+      return 6;
     }
   }
 

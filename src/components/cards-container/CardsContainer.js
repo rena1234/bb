@@ -43,10 +43,10 @@ function CardsContainer({pageSize}) {
 
 	return(
     <div className={style['cards-container']}>
+      <div className={style['cards-container__cards']}>
       <div className={style['cards-container__title']}>
         {title}
       </div>
-      <div className={style['cards-container__cards']}>
         { React.Children.toArray(
            characters[page].map( (c) => 
              <Card className={style['cards-container__cards__card']} character={c}/>)
