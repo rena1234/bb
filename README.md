@@ -9,7 +9,7 @@ tests: npm test
 
 Extras:
 
-- Páginas com tamanho diferente dependendo da largura da tela.
+- Némero de páginas dinâmico dependendo da largura da tela.
 
 - Interface mobile, tablet, desktop.
 
