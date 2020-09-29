@@ -43,6 +43,10 @@ Config:
 
 - Arquivos de output com nome hasheado para previnir problemas com cache.
 
+Contexto:
+
+- Para contexto foi utilizado o Context API do próprio react.
+
 Mobile Interface (screenshot do firefox no computador em um dispositivo mobile a scrollbar não apareceria):
 
 ![alt text](https://i.imgur.com/LsciUkW.png)
