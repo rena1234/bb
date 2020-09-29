@@ -29,7 +29,7 @@ describe('CardsContainer', () => {
         img: '',
         name: 'Walter White',
         nickname: 'Heisenberg',
-        occupation: '',
+        occupation: [''],
         portrayed: 'Bryan Cranston',
         status: 'Presumed Dead'
       }
@@ -54,12 +54,15 @@ describe('CardsContainer', () => {
     fetch.mockResponseOnce(JSON.stringify([
       {
         name: 'a',
+        occupation: [''],
       },
       {
         name: 'b',
+        occupation: [''],
       },
       {
         name: 'c',
+        occupation: [''],
       },
     ]));
 

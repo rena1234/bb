@@ -20,6 +20,8 @@ function Card({character}) {
     }
   }
 
+  const occupation = character.occupation.join(', ');
+
 	return(
     <div className={style['card']}>
       <div className={style['card__img']} style={backgroundImgStyle}>
@@ -35,7 +37,7 @@ function Card({character}) {
           <span>&#9733; </span>
           <span className={style['card__info__birthday__date']}>{character.birthday}</span>
         </div>
-        <span className={style['card__info__desc']}>{character.occupation.join(', ')}</span>
+        <span className={style['card__info__desc']}>{occupation}</span>
       </div>
     </div>
 	);

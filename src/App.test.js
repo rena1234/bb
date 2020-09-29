@@ -29,7 +29,7 @@ describe('App', () => {
         img: '',
         name: 'Walter White',
         nickname: 'Heisenberg',
-        occupation: '',
+        occupation: [''],
         portrayed: 'Bryan Cranston',
         status: 'Presumed Dead'
       }
@@ -56,7 +56,7 @@ describe('App', () => {
         img: '',
         name: 'Walter White',
         nickname: 'Heisenberg',
-        occupation: '',
+        occupation: [''],
         portrayed: 'Bryan Cranston',
         status: 'Presumed Dead'
       }
@@ -81,7 +81,7 @@ describe('App', () => {
         img: '',
         name: 'Skyler White',
         nickname: '',
-        occupation: '',
+        occupation: [''],
         portrayed: '',
         status: ''
       }
