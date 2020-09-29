@@ -33,8 +33,6 @@ function CardsContainer({pageSize}) {
     }
   }
 
-  console.log(pageSize);
-
   useEffect(() => {
     setPage(0);
     updateCharacters(search);
